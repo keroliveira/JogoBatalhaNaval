@@ -1,0 +1,1 @@
+Este protótipo de Batalha Naval, desenvolvido para a disciplina de Introdução à Programação de Computadores, cria um tabuleiro 10x10, posiciona dois navios (um horizontal e outro vertical) e exibe o tabuleiro. O objetivo é praticar o uso de matrizes (arrays 2D), vetores (arrays 1D), loops for, e lógica de coordenadas.
