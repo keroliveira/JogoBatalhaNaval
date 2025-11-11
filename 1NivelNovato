@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main (){
+    //Linhas do tabuleiro
+    char linhatabuleiro[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+    
+    //Casas do tabuleiro
+    int casastabuleiro[10][10] = {0};
+    
+    //Navio horizontal
+    int colunahorizontal = 6;
+    int linhahorizontal = 6;
+
+    for(int i = 0; i < 3; i++){
+        casastabuleiro[linhahorizontal][colunahorizontal + i] = 3;
+    }
+    
+    //Navio vertical
+    int colunavertical = 7;
+    int linhavertical = 6;
+
+    for(int i = 0; i < 3; i++){
+        casastabuleiro[linhavertical + i][colunavertical] = 3;
+    }
+
+    //Exibindo o tabuleiro
+    printf("***************************************\n");
+    printf("********* Jogo de Batalha Naval *******\n");
+    printf("***************************************\n");
+
+    // Letras do topo
+    printf("   ");
+    for(int i = 0; i < 10; i++){
+        printf("%c ", linhatabuleiro[i]);
+    }
+    printf("\n");
+
+    // Números laterais
+    for(int linha = 0; linha < 10; linha++){
+        if(linha < 9)
+            printf("%d  ", linha + 1);
+        else
+            printf("%d ", linha + 1);
+        
+        // Conteúdo das colunas
+        for(int coluna = 0; coluna < 10; coluna++){
+            printf("%d ", casastabuleiro[linha][coluna]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
